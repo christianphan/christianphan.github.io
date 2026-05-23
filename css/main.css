@@ -174,7 +174,6 @@ img {
 }
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
-  border-radius: 50%;
   margin-left: -50%;
   display: inline-block;
   box-shadow: 0 0 8px rgba(0, 0, 0, .8);
@@ -183,7 +182,6 @@ img {
 }
 .navbar-custom .avatar-container .avatar-img {
   width: 100%;
-  border-radius: 50%;
   display: block;
 }
 
@@ -785,4 +783,82 @@ pre {
   color: #808080;
   font-style: italic;
   font-size: 16px;
+}
+
+/* --- Interest Tags (Index Intro) --- */
+
+.interest-tags-section {
+  text-align: center;
+  margin: 30px 0 40px;
+}
+
+.interest-tags-intro {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.interest-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.interest-tag {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  cursor: default;
+  animation: tagFloat 3s ease-in-out infinite;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.interest-tag:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Stagger the floating animation so they don't all bob in sync */
+.interest-tag:nth-child(1) { animation-delay: 0s; }
+.interest-tag:nth-child(2) { animation-delay: 0.2s; }
+.interest-tag:nth-child(3) { animation-delay: 0.4s; }
+.interest-tag:nth-child(4) { animation-delay: 0.6s; }
+.interest-tag:nth-child(5) { animation-delay: 0.8s; }
+.interest-tag:nth-child(6) { animation-delay: 1.0s; }
+.interest-tag:nth-child(7) { animation-delay: 1.2s; }
+.interest-tag:nth-child(8) { animation-delay: 1.4s; }
+
+/* Individual tag colors */
+.tag-ee      { background: linear-gradient(135deg, #667eea, #764ba2); }
+.tag-ms      { background: linear-gradient(135deg, #f093fb, #f5576c); }
+.tag-semi    { background: linear-gradient(135deg, #4facfe, #00f2fe); }
+.tag-invest  { background: linear-gradient(135deg, #43e97b, #38f9d7); color: #333; }
+.tag-tech    { background: linear-gradient(135deg, #fa709a, #fee140); color: #333; }
+.tag-oss     { background: linear-gradient(135deg, #a18cd1, #fbc2eb); }
+.tag-learn   { background: linear-gradient(135deg, #fccb90, #d57eeb); }
+.tag-travel  { background: linear-gradient(135deg, #96fbc4, #f9f586); color: #333; }
+
+@keyframes tagFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%      { transform: translateY(-6px); }
+}
+
+@media only screen and (max-width: 500px) {
+  .interest-tags {
+    gap: 8px;
+  }
+  .interest-tag {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+  .interest-tags-intro {
+    font-size: 17px;
+  }
 }
