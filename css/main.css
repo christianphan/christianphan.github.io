@@ -171,6 +171,7 @@ img {
   left: 50%;
   width: 50px;
   margin-top: -25px;
+  border-radius: 50%;
 }
 .navbar-custom .avatar-container .avatar-img-border {
   width: 100%;
@@ -185,6 +186,9 @@ img {
 .navbar-custom .avatar-container .avatar-img {
   width: 100%;
   display: block;
+  border-radius: 50%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .navbar-custom.top-nav-expanded .avatar-container {
@@ -195,6 +199,7 @@ img {
   .navbar-custom .avatar-container {
     width: 100px;
     margin-top: -50px;
+    border-radius: 50%;
   }
 
   .navbar-custom .avatar-container .avatar-img-border {
@@ -208,6 +213,9 @@ img {
 
   .navbar-custom .avatar-container .avatar-img {
     width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
   }
 }
 
